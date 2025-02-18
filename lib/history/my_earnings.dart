@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:waste_management/models/bodytext.dart';
 
 class MyEarnings extends StatefulWidget {
   const MyEarnings({super.key});
@@ -27,58 +28,25 @@ class _MyEarningsState extends State<MyEarnings> {
                     children: [
                       Row(
                         children: [
-                          Text("Payment Date/Time: ",
-                              style: TextStyle(
-                                  color: Colors.black87,
-                                  fontSize: 14,
-                                  fontWeight: FontWeight.w400)),
-                          Text("February 4, 2025, 8:00AM",
-                              maxLines: 1,
-                              overflow: TextOverflow.clip,
-                              style: TextStyle(
-                                  color: Colors.black87,
-                                  fontSize: 14,
-                                  fontWeight: FontWeight.w400))
+                          BodyText(text: "Payment Date/Time: "),
+                          BodyText(text: "February 4, 2025, 8:00AM")
                         ],
                       ),
-                      SizedBox(height: 2),
                       Row(
                         children: [
-                          Text("Amount: ",
-                              style: TextStyle(
-                                  color: Colors.black87,
-                                  fontSize: 14,
-                                  fontWeight: FontWeight.w400)),
-                          Text("₦ 25,000",
-                              style: TextStyle(
-                                  color: Colors.black87,
-                                  fontSize: 14,
-                                  fontWeight: FontWeight.w400))
+                          BodyText(text: "Amount: "),
+                          BodyText(text: "₦ 25,000")
                         ],
                       ),
-                      SizedBox(height: 2),
                       Row(
                         children: [
-                          Text("Payment Method: ",
-                              style: TextStyle(
-                                  color: Colors.black87,
-                                  fontSize: 14,
-                                  fontWeight: FontWeight.w400)),
-                          Text("Mobile Transfer",
-                              style: TextStyle(
-                                  color: Colors.black87,
-                                  fontSize: 14,
-                                  fontWeight: FontWeight.w400))
+                          BodyText(text: "Payment Method: "),
+                          BodyText(text: "Mobile Transfer")
                         ],
                       ),
-                      SizedBox(height: 2),
                       Row(
                         children: [
-                          Text("Payment Status: ",
-                              style: TextStyle(
-                                  color: Colors.black87,
-                                  fontSize: 14,
-                                  fontWeight: FontWeight.w400)),
+                          BodyText(text: "Payment Status: "),
                           Text(
                             "Pending",
                             style: TextStyle(
@@ -91,16 +59,8 @@ class _MyEarningsState extends State<MyEarnings> {
                       SizedBox(height: 2),
                       Row(
                         children: [
-                          Text("Waste Submission Reference: ",
-                              style: TextStyle(
-                                  color: Colors.black87,
-                                  fontSize: 14,
-                                  fontWeight: FontWeight.w400)),
-                          Text("#123422",
-                              style: TextStyle(
-                                  color: Colors.black87,
-                                  fontSize: 14,
-                                  fontWeight: FontWeight.w400)),
+                          BodyText(text: "Waste Submission Reference: "),
+                          BodyText(text: "#123422"),
                         ],
                       ),
                       Center(
@@ -118,58 +78,25 @@ class _MyEarningsState extends State<MyEarnings> {
                       ),
                       Row(
                         children: [
-                          Text("Payment Date/Time: ",
-                              style: TextStyle(
-                                  color: Colors.black87,
-                                  fontSize: 14,
-                                  fontWeight: FontWeight.w400)),
-                          Text("February 4, 2025, 8:00AM",
-                              maxLines: 1,
-                              overflow: TextOverflow.clip,
-                              style: TextStyle(
-                                  color: Colors.black87,
-                                  fontSize: 14,
-                                  fontWeight: FontWeight.w400))
+                          BodyText(text: "Payment Date/Time: "),
+                          BodyText(text: "February 4, 2025, 8:00AM")
                         ],
                       ),
-                      SizedBox(height: 2),
                       Row(
                         children: [
-                          Text("Amount: ",
-                              style: TextStyle(
-                                  color: Colors.black87,
-                                  fontSize: 14,
-                                  fontWeight: FontWeight.w400)),
-                          Text("₦ 25,000",
-                              style: TextStyle(
-                                  color: Colors.black87,
-                                  fontSize: 14,
-                                  fontWeight: FontWeight.w400))
+                          BodyText(text: "February 4, 2025, 8:00AM"),
+                          BodyText(text: "₦ 25,000")
                         ],
                       ),
-                      SizedBox(height: 2),
                       Row(
                         children: [
-                          Text("Payment Method: ",
-                              style: TextStyle(
-                                  color: Colors.black87,
-                                  fontSize: 14,
-                                  fontWeight: FontWeight.w400)),
-                          Text("Mobile Transfer",
-                              style: TextStyle(
-                                  color: Colors.black87,
-                                  fontSize: 14,
-                                  fontWeight: FontWeight.w400))
+                          BodyText(text: "Payment Method: "),
+                          BodyText(text: "Mobile Transfer")
                         ],
                       ),
-                      SizedBox(height: 2),
                       Row(
                         children: [
-                          Text("Payment Status: ",
-                              style: TextStyle(
-                                  color: Colors.black87,
-                                  fontSize: 14,
-                                  fontWeight: FontWeight.w400)),
+                          BodyText(text: "Payment Status: "),
                           Text(
                             "Paid",
                             style: TextStyle(
@@ -182,16 +109,8 @@ class _MyEarningsState extends State<MyEarnings> {
                       SizedBox(height: 2),
                       Row(
                         children: [
-                          Text("Waste Submission Reference: ",
-                              style: TextStyle(
-                                  color: Colors.black87,
-                                  fontSize: 14,
-                                  fontWeight: FontWeight.w400)),
-                          Text("#123422",
-                              style: TextStyle(
-                                  color: Colors.black87,
-                                  fontSize: 14,
-                                  fontWeight: FontWeight.w400)),
+                          BodyText(text: "Waste Submission Reference: "),
+                          BodyText(text: "#123422")
                         ],
                       ),
                       Center(
@@ -209,58 +128,25 @@ class _MyEarningsState extends State<MyEarnings> {
                       ),
                       Row(
                         children: [
-                          Text("Payment Date/Time: ",
-                              style: TextStyle(
-                                  color: Colors.black87,
-                                  fontSize: 14,
-                                  fontWeight: FontWeight.w400)),
-                          Text("February 4, 2025, 8:00AM",
-                              maxLines: 1,
-                              overflow: TextOverflow.clip,
-                              style: TextStyle(
-                                  color: Colors.black87,
-                                  fontSize: 14,
-                                  fontWeight: FontWeight.w400))
+                          BodyText(text: "Payment Date/Time: "),
+                          BodyText(text: "February 4, 2025, 8:00AM")
                         ],
                       ),
-                      SizedBox(height: 2),
                       Row(
                         children: [
-                          Text("Amount: ",
-                              style: TextStyle(
-                                  color: Colors.black87,
-                                  fontSize: 14,
-                                  fontWeight: FontWeight.w400)),
-                          Text("₦ 25,000",
-                              style: TextStyle(
-                                  color: Colors.black87,
-                                  fontSize: 14,
-                                  fontWeight: FontWeight.w400))
+                          BodyText(text: "Amount: "),
+                          BodyText(text: "₦ 25,000")
                         ],
                       ),
-                      SizedBox(height: 2),
                       Row(
                         children: [
-                          Text("Payment Method: ",
-                              style: TextStyle(
-                                  color: Colors.black87,
-                                  fontSize: 14,
-                                  fontWeight: FontWeight.w400)),
-                          Text("Mobile Transfer",
-                              style: TextStyle(
-                                  color: Colors.black87,
-                                  fontSize: 14,
-                                  fontWeight: FontWeight.w400))
+                          BodyText(text: "Payment Method: "),
+                          BodyText(text: "Mobile Transfer")
                         ],
                       ),
-                      SizedBox(height: 2),
                       Row(
                         children: [
-                          Text("Payment Status: ",
-                              style: TextStyle(
-                                  color: Colors.black87,
-                                  fontSize: 14,
-                                  fontWeight: FontWeight.w400)),
+                          BodyText(text: "Payment Status: "),
                           Text(
                             "Failed",
                             style: TextStyle(
@@ -273,16 +159,8 @@ class _MyEarningsState extends State<MyEarnings> {
                       SizedBox(height: 2),
                       Row(
                         children: [
-                          Text("Waste Submission Reference: ",
-                              style: TextStyle(
-                                  color: Colors.black87,
-                                  fontSize: 14,
-                                  fontWeight: FontWeight.w400)),
-                          Text("#123422",
-                              style: TextStyle(
-                                  color: Colors.black87,
-                                  fontSize: 14,
-                                  fontWeight: FontWeight.w400)),
+                          BodyText(text: "Waste Submission Reference: "),
+                          BodyText(text: "#123422"),
                         ],
                       ),
                       Center(

@@ -21,5 +21,3 @@ class _MyAppState extends State<MyApp> {
     );
   }
 }
-
-void this_is_a_function() {}

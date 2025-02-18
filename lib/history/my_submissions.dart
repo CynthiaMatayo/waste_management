@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:waste_management/models/bodytext.dart';
 
 class MySubmissions extends StatefulWidget {
   const MySubmissions({super.key});
@@ -27,86 +28,38 @@ class _MySubmissionsState extends State<MySubmissions> {
                     children: [
                       Row(
                         children: [
-                          Text("Waste Type: ",
-                              style: TextStyle(
-                                  color: Colors.black87,
-                                  fontSize: 14,
-                                  fontWeight: FontWeight.w400)),
-                          Text("Plastic",
-                              style: TextStyle(
-                                  color: Colors.black87,
-                                  fontSize: 14,
-                                  fontWeight: FontWeight.w400))
+                          BodyText(text: "Waste Type: "),
+                          BodyText(text: "Plastic"),
                         ],
                       ),
-                      SizedBox(height: 2),
                       Row(
                         children: [
-                          Text("Submitted on: ",
-                              style: TextStyle(
-                                  color: Colors.black87,
-                                  fontSize: 14,
-                                  fontWeight: FontWeight.w400)),
-                          Text("Feb 3, 2025",
-                              style: TextStyle(
-                                  color: Colors.black87,
-                                  fontSize: 14,
-                                  fontWeight: FontWeight.w400))
+                          BodyText(text: "Submitted on: "),
+                          BodyText(text: "Feb 3, 2025"),
                         ],
                       ),
-                      SizedBox(height: 2),
                       Row(
                         children: [
-                          Text("Waste Submission Reference: ",
-                              style: TextStyle(
-                                  color: Colors.black87,
-                                  fontSize: 14,
-                                  fontWeight: FontWeight.w400)),
-                          Text("#123422",
-                              style: TextStyle(
-                                  color: Colors.black87,
-                                  fontSize: 14,
-                                  fontWeight: FontWeight.w400))
+                          BodyText(text: "Waste Submission Reference: "),
+                          BodyText(text: "#123422"),
                         ],
                       ),
-                      SizedBox(height: 2),
                       Row(
                         children: [
-                          Text("Quantity: ",
-                              style: TextStyle(
-                                  color: Colors.black87,
-                                  fontSize: 14,
-                                  fontWeight: FontWeight.w400)),
-                          Text("5kg",
-                              style: TextStyle(
-                                  color: Colors.black87,
-                                  fontSize: 14,
-                                  fontWeight: FontWeight.w400))
+                          BodyText(text: "Quantity: "),
+                          BodyText(text: "5kg")
                         ],
                       ),
-                      SizedBox(height: 2),
+
                       Row(
                         children: [
-                          Text("Pickup Date/Time: ",
-                              style: TextStyle(
-                                  color: Colors.black87,
-                                  fontSize: 14,
-                                  fontWeight: FontWeight.w400)),
-                          Text("Feb 3, 2025",
-                              style: TextStyle(
-                                  color: Colors.black87,
-                                  fontSize: 14,
-                                  fontWeight: FontWeight.w400))
+                          BodyText(text: "Pickup Date/Time: "),
+                          BodyText(text: "Feb 3, 2025")
                         ],
                       ),
-                      SizedBox(height: 2),
                       Row(
                         children: [
-                          Text("Payment Status: ",
-                              style: TextStyle(
-                                  color: Colors.black87,
-                                  fontSize: 14,
-                                  fontWeight: FontWeight.w400)),
+                          BodyText(text: "Payment Status: "),
                           Text(
                             "Pending",
                             style: TextStyle(
@@ -130,85 +83,36 @@ class _MySubmissionsState extends State<MySubmissions> {
                         height: 5,
                       ),
                       Row(children: [
-                        Text("Waste Type: ",
-                            style: TextStyle(
-                                color: Colors.black87,
-                                fontSize: 14,
-                                fontWeight: FontWeight.w400)),
-                        Text("Plastic",
-                            style: TextStyle(
-                                color: Colors.black87,
-                                fontSize: 14,
-                                fontWeight: FontWeight.w400))
+                        BodyText(text: "Waste Type: "),
+                        BodyText(text: "Plastic")
                       ]),
-                      SizedBox(height: 2),
                       Row(
                         children: [
-                          Text("Submitted on: ",
-                              style: TextStyle(
-                                  color: Colors.black87,
-                                  fontSize: 14,
-                                  fontWeight: FontWeight.w400)),
-                          Text("Feb 3, 2025",
-                              style: TextStyle(
-                                  color: Colors.black87,
-                                  fontSize: 14,
-                                  fontWeight: FontWeight.w400))
+                          BodyText(text: "Submitted on: "),
+                          BodyText(text: "Feb 3, 2025")
                         ],
                       ),
-                      SizedBox(height: 2),
                       Row(
                         children: [
-                          Text("Waste Submission Reference: ",
-                              style: TextStyle(
-                                  color: Colors.black87,
-                                  fontSize: 14,
-                                  fontWeight: FontWeight.w400)),
-                          Text("#123422",
-                              style: TextStyle(
-                                  color: Colors.black87,
-                                  fontSize: 14,
-                                  fontWeight: FontWeight.w400))
+                          BodyText(text: "Waste Submission Reference: "),
+                          BodyText(text: "#123422")
                         ],
                       ),
-                      SizedBox(height: 2),
                       Row(
                         children: [
-                          Text("Quantity: ",
-                              style: TextStyle(
-                                  color: Colors.black87,
-                                  fontSize: 14,
-                                  fontWeight: FontWeight.w400)),
-                          Text("5kg",
-                              style: TextStyle(
-                                  color: Colors.black87,
-                                  fontSize: 14,
-                                  fontWeight: FontWeight.w400))
+                          BodyText(text: "Quantity: "),
+                          BodyText(text: "5kg")
                         ],
                       ),
-                      SizedBox(height: 2),
                       Row(
                         children: [
-                          Text("Pickup Date/Time: ",
-                              style: TextStyle(
-                                  color: Colors.black87,
-                                  fontSize: 14,
-                                  fontWeight: FontWeight.w400)),
-                          Text("Feb 3, 2025",
-                              style: TextStyle(
-                                  color: Colors.black87,
-                                  fontSize: 14,
-                                  fontWeight: FontWeight.w400))
+                          BodyText(text: "Pickup Date/Time: "),
+                          BodyText(text: "Feb 3, 2025")
                         ],
                       ),
-                      SizedBox(height: 2),
                       Row(
                         children: [
-                          Text("Payment Status: ",
-                              style: TextStyle(
-                                  color: Colors.black87,
-                                  fontSize: 14,
-                                  fontWeight: FontWeight.w400)),
+                          BodyText(text: "Payment Status: "),
                           Text(
                             "Completed",
                             style: TextStyle(
@@ -228,87 +132,37 @@ class _MySubmissionsState extends State<MySubmissions> {
                             )),
                       ),
                       Divider(),
-                      SizedBox(height: 2),
                       Row(children: [
-                        Text("Waste Type: ",
-                            style: TextStyle(
-                                color: Colors.black87,
-                                fontSize: 14,
-                                fontWeight: FontWeight.w400)),
-                        Text("Plastic",
-                            style: TextStyle(
-                                color: Colors.black87,
-                                fontSize: 14,
-                                fontWeight: FontWeight.w400))
+                        BodyText(text: "Waste Type: "),
+                        BodyText(text: "Plastic")
                       ]),
-                      SizedBox(height: 2),
                       Row(
                         children: [
-                          Text("Submitted on: ",
-                              style: TextStyle(
-                                  color: Colors.black87,
-                                  fontSize: 14,
-                                  fontWeight: FontWeight.w400)),
-                          Text("Feb 3, 2025",
-                              style: TextStyle(
-                                  color: Colors.black87,
-                                  fontSize: 14,
-                                  fontWeight: FontWeight.w400))
+                          BodyText(text: "Submitted on: "),
+                          BodyText(text: "Feb 3, 2025")
                         ],
                       ),
-                      SizedBox(height: 2),
                       Row(
                         children: [
-                          Text("Waste Submission Reference: ",
-                              style: TextStyle(
-                                  color: Colors.black87,
-                                  fontSize: 14,
-                                  fontWeight: FontWeight.w400)),
-                          Text("#123422",
-                              style: TextStyle(
-                                  color: Colors.black87,
-                                  fontSize: 14,
-                                  fontWeight: FontWeight.w400))
+                          BodyText(text: "Waste Submission Reference: "),
+                          BodyText(text: "#123422")
                         ],
                       ),
-                      SizedBox(height: 2),
                       Row(
                         children: [
-                          Text("Quantity: ",
-                              style: TextStyle(
-                                  color: Colors.black87,
-                                  fontSize: 14,
-                                  fontWeight: FontWeight.w400)),
-                          Text("5kg",
-                              style: TextStyle(
-                                  color: Colors.black87,
-                                  fontSize: 14,
-                                  fontWeight: FontWeight.w400))
+                          BodyText(text: "Quantity: "),
+                          BodyText(text: "5kg")
                         ],
                       ),
-                      SizedBox(height: 2),
                       Row(
                         children: [
-                          Text("Pickup Date/Time: ",
-                              style: TextStyle(
-                                  color: Colors.black87,
-                                  fontSize: 14,
-                                  fontWeight: FontWeight.w400)),
-                          Text("Feb 3, 2025",
-                              style: TextStyle(
-                                  color: Colors.black87,
-                                  fontSize: 14,
-                                  fontWeight: FontWeight.w400))
+                          BodyText(text: "Pickup Date/Time: "),
+                          BodyText(text: "Feb 3, 2025")
                         ],
                       ),
-                      SizedBox(height: 2),
                       Row(
                         children: [
-                          Text("Payment Status: ",
-                              style: TextStyle(
-                                  color: Colors.black87,
-                                  fontSize: 14,
-                                  fontWeight: FontWeight.w400)),
+                          BodyText(text: "Payment Status: "),
                           Text(
                             "Pending",
                             style: TextStyle(
