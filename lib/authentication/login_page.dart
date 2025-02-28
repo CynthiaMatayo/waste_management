@@ -150,15 +150,18 @@ class _LoginPageState extends State<LoginPage> {
                         style: TextStyle(color: Colors.greenAccent),
                       ),
                       TextButton(
-                          onPressed: () {
-                            Navigator.push(context, MaterialPageRoute(
-                              builder: (context) {
-                                return RegistrationPage();
-                              },
-                            ));
-                          },
-                          child: Text("Sign Up.",
-                              style: TextStyle(color: Colors.blue)))
+                        onPressed: () {
+                          Navigator.push(context, MaterialPageRoute(
+                            builder: (context) {
+                              return RegistrationPage();
+                            },
+                          ));
+                        },
+                        child: Text(
+                          "Sign Up.",
+                          style: TextStyle(color: Colors.blue),
+                        ),
+                      ),
                     ],
                   )
                 ],

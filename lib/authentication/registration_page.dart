@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:waste_management/authentication/login_page.dart';
 import 'package:waste_management/home_page.dart';
 import 'package:waste_management/models/confirm_widget.dart';
 import 'package:waste_management/models/controllers.dart';
@@ -113,6 +114,28 @@ class _RegistrationPageState extends State<RegistrationPage> {
                         ),
                       ),
                     ),
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Text(
+                        "Have an account?",
+                        style: TextStyle(color: Colors.greenAccent),
+                      ),
+                      TextButton(
+                        onPressed: () {
+                          Navigator.push(context, MaterialPageRoute(
+                            builder: (context) {
+                              return LoginPage();
+                            },
+                          ));
+                        },
+                        child: Text(
+                          "Log In.",
+                          style: TextStyle(color: Colors.blue),
+                        ),
+                      ),
+                    ],
                   ),
                 ],
               ),

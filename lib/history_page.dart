@@ -65,9 +65,14 @@ class _HistoryPageState extends State<HistoryPage> {
                                 borderRadius:
                                     BorderRadius.all(Radius.circular(3)),
                                 borderSide: BorderSide.none),
-                            prefixIcon: Icon(
-                              Icons.filter_alt_outlined,
-                              size: 39,
+                            prefixIcon: IconButton(
+                              onPressed: () {},
+
+                              // Icons.filter_alt_outlined,
+                              icon: Icon(
+                                Icons.filter_alt_outlined,
+                              ),
+                              iconSize: 39,
                               color: Colors.green,
                             ),
                           ),

@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:waste_management/models/controllers.dart';
-import 'package:waste_management/withdraw/withdrawal_failed.dart';
 
 class Confirm extends StatefulWidget {
   const Confirm({super.key});
