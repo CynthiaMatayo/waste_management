@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:waste_management/add_waste/address.dart';
+import 'package:waste_management/authentication/login_page.dart';
 import 'package:waste_management/decorations/first.dart';
 import 'package:waste_management/withdraw_fund.dart';
 
@@ -247,6 +248,11 @@ class _ProfileState extends State<Profile> {
                             trailing: Icon(Icons.chevron_right),
                             onTap: () {
                               print("Signing Out...");
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                    builder: (context) => LoginPage(),
+                                  ));
                             },
                           ),
                         ],
