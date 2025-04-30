@@ -3,17 +3,25 @@ import 'package:waste_management/home_page.dart';
 import 'package:waste_management/models/controllers.dart';
 import 'package:waste_management/models/input_widget.dart';
 import 'package:waste_management/authentication/registration_page.dart';
+import 'package:waste_management/api_service.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
 
   @override
   State<LoginPage> createState() => _LoginPageState();
+  
 }
 
 class _LoginPageState extends State<LoginPage> {
+  final TextEditingController _usernameController = TextEditingController();
+  final TextEditingController _passwordController = TextEditingController();
+  bool _isLoading = false;
+
+  
   @override
   Widget build(BuildContext context) {
+    
     return Scaffold(
       resizeToAvoidBottomInset: false,
       body: Stack(
@@ -126,6 +134,41 @@ class _LoginPageState extends State<LoginPage> {
                               );
                             }
                           }
+                          void _handleLogin() async {
+                            setState(() {
+                              _isLoading = true;
+                            });
+
+                            try {
+                              bool success = await ApiService.login(
+                                _usernameController.text.trim(),
+                                _passwordController.text,
+                              );
+
+                              if (success) {
+                                Navigator.pushReplacement(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) => HomePage()),
+                                );
+                              } else {
+                                ScaffoldMessenger.of(context).showSnackBar(
+                                  SnackBar(
+                                      content: Text(
+                                          'Incorrect username or password')),
+                                );
+                              }
+                            } catch (e) {
+                              ScaffoldMessenger.of(context).showSnackBar(
+                                SnackBar(content: Text('Login failed: $e')),
+                              );
+                            } finally {
+                              setState(() {
+                                _isLoading = false;
+                              });
+                            }
+                          }
+
                         },
                         child: SizedBox(
                           width: 200,
