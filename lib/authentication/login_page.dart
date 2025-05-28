@@ -1,3 +1,5 @@
+//lib/authentication/login_page.dart
+
 import 'package:flutter/material.dart';
 import 'package:waste_management/home_page.dart';
 import 'package:waste_management/models/controllers.dart';
@@ -44,15 +46,7 @@ class _LoginPageState extends State<LoginPage> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  // Row(
-                  //   children: [
-                  //     IconButton(icon: Icon(Icons.arrow_back), onPressed: (){
-                  //       // Handle back action
-                  //     }
-                  // ),
-                  // Spacer(),
-                  // ],
-                  // ),
+
                   SizedBox(height: 20), //Space between arrow and input fields
                   Text(
                     "Log In",
@@ -69,18 +63,7 @@ class _LoginPageState extends State<LoginPage> {
                     hint: "Username",
                     icon: Icons.person_outline,
                   ),
-                  SizedBox(height: 16), //Space between input fields
-
-                  // TextField(
-                  //   controller: passwordController,
-                  //   obscureText: true,
-                  //   obscuringCharacter: "*",
-                  //   decoration: InputDecoration(
-                  //       prefixIcon: Icon(Icons.lock_outline),
-                  //       hintText: "Password",
-                  //       hintStyle: TextStyle(
-                  //           color: Colors.grey, fontStyle: FontStyle.italic)),
-                  // ),
+                  SizedBox(height: 16),
 
                   InputWidget(
                       isPassword: true,
@@ -134,6 +117,7 @@ class _LoginPageState extends State<LoginPage> {
                               );
                             }
                           }
+
                           void _handleLogin() async {
                             setState(() {
                               _isLoading = true;

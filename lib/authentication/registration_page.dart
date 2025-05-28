@@ -5,6 +5,7 @@ import 'package:waste_management/models/confirm_widget.dart';
 import 'package:waste_management/models/controllers.dart';
 import 'package:waste_management/models/extracted_widget.dart';
 import 'package:waste_management/models/input_widget.dart';
+import 'package:waste_management/api_service.dart';
 
 class RegistrationPage extends StatefulWidget {
   const RegistrationPage({super.key});
@@ -14,6 +15,68 @@ class RegistrationPage extends StatefulWidget {
 }
 
 class _RegistrationPageState extends State<RegistrationPage> {
+  bool _isLoading = false;
+
+  // If controllers are not defined globally, add them here
+  // final TextEditingController _usernameController = TextEditingController();
+  // final TextEditingController _emailController = TextEditingController();
+  // final TextEditingController _passwordController = TextEditingController();
+  // final TextEditingController _confirmController = TextEditingController();
+
+  void _handleRegistration() async {
+    if (usernameController.text.isEmpty ||
+        emailController.text.isEmpty ||
+        passwordController.text.isEmpty ||
+        confirmController.text.isEmpty) {
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(content: Text('All fields are required')),
+      );
+      return;
+    }
+
+    if (passwordController.text != confirmController.text) {
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(content: Text('Passwords don\'t match')),
+      );
+      return;
+    }
+
+    setState(() {
+      _isLoading = true;
+    });
+
+    try {
+      bool success = await ApiService.register(
+        usernameController.text.trim(),
+        emailController.text.trim(),
+        passwordController.text,
+        confirmController.text,
+      );
+
+      if (success) {
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(content: Text('Registration successful')),
+        );
+        Navigator.pushReplacement(
+          context,
+          MaterialPageRoute(builder: (context) => HomePage()),
+        );
+      } else {
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(content: Text('Registration failed')),
+        );
+      }
+    } catch (e) {
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(content: Text('Registration failed: $e')),
+      );
+    } finally {
+      setState(() {
+        _isLoading = false;
+      });
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -80,38 +143,22 @@ class _RegistrationPageState extends State<RegistrationPage> {
                         horizontal: 50.0, vertical: 4),
                     child: Center(
                       child: ElevatedButton(
-                        onPressed: () {
-                          if (usernameController.text.isEmpty ||
-                              emailController.text.isEmpty ||
-                              passwordController.text.isEmpty ||
-                              confirmController.text.isEmpty) {
-                            print("All fields are required. ");
-                          } else {
-                            if (passwordController.text !=
-                                confirmController.text) {
-                              print("Passwords don't match.");
-                            } else {
-                              print("Sign Up Successful!");
-                              Navigator.pushReplacement(
-                                  context,
-                                  MaterialPageRoute(
-                                      builder: (context) => HomePage()));
-                            }
-                          }
-                        },
-                        child: SizedBox(
-                          width: 200,
-                          height: 50,
-                          child: Center(
-                            child: Text(
-                              "Sign Up",
-                              style: TextStyle(
-                                fontWeight: FontWeight.bold,
-                                fontSize: 25,
+                        onPressed: _isLoading ? null : _handleRegistration,
+                        child: _isLoading
+                            ? CircularProgressIndicator(color: Colors.white)
+                            : SizedBox(
+                                width: 200,
+                                height: 50,
+                                child: Center(
+                                  child: Text(
+                                    "Sign Up",
+                                    style: TextStyle(
+                                      fontWeight: FontWeight.bold,
+                                      fontSize: 25,
+                                    ),
+                                  ),
+                                ),
                               ),
-                            ),
-                          ),
-                        ),
                       ),
                     ),
                   ),
